@@ -30,7 +30,7 @@ a{
 }
 .title_header {
   margin: 0 auto;
-  /*background-image: url(..src/img/header-bg.jpg);*/
+  /*background-image: url(..img/header-bg.jpg);*/
   background-color: #78cfcf;
   background-size: cover;
   /*width: 1141px;*/
@@ -67,7 +67,7 @@ a{
 .title_headers-under{
     /*display: block;
     content: "";
-    background-image: url(..src/img/separator.png);
+    background-image: url(..img/separator.png);
     width: 130px;
     height: 15px;
     display: block;
@@ -99,7 +99,7 @@ a{
   font-size: 18px;
   color: #4a4e4c;
   /*background-color: white;*/
-  background-image: url(../src/img/ribbon.png);
+  background-image: url(../img/ribbon.png);
   background-position: 50% 50%;
   width: 90%;
   background-repeat: no-repeat;
@@ -300,7 +300,7 @@ a{
 }
 
 .filter_item{
-    background-image: url(../src/img/tag.png);
+    background-image: url(../img/tag.png);
     font-family: 'UniSansHeavy';
     font-size: 16px;
     color: #4a4e4c;

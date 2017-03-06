@@ -25,6 +25,14 @@ gulp.task('watch', ['browserSync', 'sass'], function (){
   // Other watchers
 })
 
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: ''
+    },
+  })
+})
+
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
@@ -38,10 +46,13 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: ''
-    },
-  })
-})
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
+
+gulp.task('images', function(){
+  return gulp.src('img/**/*.+(png|jpg|jpeg|gif|svg)')
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
+  .pipe(gulp.dest('dist/img'))
+});
