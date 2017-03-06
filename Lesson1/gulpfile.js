@@ -56,3 +56,12 @@ gulp.task('images', function(){
     })))
   .pipe(gulp.dest('dist/img'))
 });
+
+var fontmin = require('gulp-fontmin');
+gulp.task('fonts', function () {
+    return gulp.src('fonts/*.ttf')
+        .pipe(fontmin({
+            text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        }))
+        .pipe(gulp.dest('dist/fonts'));
+});
