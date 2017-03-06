@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var server = lr();
 
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
@@ -11,7 +10,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('sass', function() {
-  return gulp.src('src/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass())
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({
@@ -20,9 +19,24 @@ gulp.task('sass', function() {
 })
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('scss/**/*.scss', ['sass']);
+  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('js/**/*.js', browserSync.reload);
   // Other watchers
 })
+
+var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
+var gulpIf = require('gulp-if');
+var cssnano = require('gulp-cssnano');
+
+gulp.task('useref', function(){
+  return gulp.src('*.html')
+    .pipe(useref())
+    .pipe(gulpIf('js/*.js', uglify()))
+    .pipe(gulpIf('css/*.css', cssnano()))
+    .pipe(gulp.dest('dist'))
+});
 
 gulp.task('browserSync', function() {
   browserSync.init({

@@ -387,12 +387,14 @@ a{
     font-family: 'Roboto Slab';
     font-size: 18px;
     width: 100%;
-    margin: 5px;
+    margin: 5px 0;
     line-height: 35px;
     border-style: none;
     border-radius: 2px;
-    padding: 0;
-    text-indent: 0.7em;
+    /*text-indent: 0.7em;*/
+    box-sizing: border-box;
+    padding: 0 10px;
+
 }
 
 .message_form_item_btn{
@@ -404,7 +406,7 @@ a{
     font-size: 15px;
     max-width: 100%;
     /*width: 10vw;*/
-    padding: 0;
+    padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     align-self: flex-start;
@@ -549,6 +551,10 @@ a{
         max-width: 40vw;
         /*min-width: 50%;
         max-width: 90%;*/
+    }
+
+    .message_form{
+        width: 90%
     }
 
 }
