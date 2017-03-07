@@ -4,22 +4,22 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function(){
-  return gulp.src('src/scss/styles.scss')
+  return gulp.src('scss/styles.sass')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('src/css'))
 });
 
 gulp.task('sass', function() {
-  return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('scss/**/*.sass') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass())
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 })
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('scss/**/*.scss', ['sass']);
+  gulp.watch('scss/**/*.sass', ['sass']);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/**/*.js', browserSync.reload);
   // Other watchers

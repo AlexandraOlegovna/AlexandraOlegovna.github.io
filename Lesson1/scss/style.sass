@@ -1,0 +1,511 @@
+@font-face
+  font-family: 'UniSansHeavy'
+  src: url('../fonts/Bazar.ttf')
+
+$font-stack:    'UniSansHeavy', serif
+$font-main:     'Roboto Slab'
+$beige:         #f9ebd9
+$brown:         #9e9e9e
+
+body, html
+    margin: 0 !important
+    padding: 0 !important
+    height: 100%
+    width: 100%
+
+a
+    cursor: pointer
+    text-decoration: none
+    color: inherit
+
+.title_container
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 auto
+  max-width: 1000px
+
+.title_header
+  background-color: #78cfcf
+
+
+.title_navbar
+  flex-wrap: wrap
+  display: flex
+  justify-content: space-between
+  text-align: center
+  padding: 0
+  width: 90%
+  min-height: 60px
+
+  .title_navbar__nav__item
+      line-height: 90px
+      padding: 0
+      font-family: $font-stack
+      font-size: 20px
+      color: $beige
+      transition: .5s
+      text-shadow: $brown 0 0 2px
+
+.title_header__content
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+.title_header__content__line
+    font-family: $font-stack
+    font-size: 22px
+    color: $beige
+    text-shadow: $brown 0 0 2px
+    text-align: center
+    margin: 10px
+    line-height: 1.4
+
+    img
+        display: block
+        margin: 0 auto
+        padding-top: 30px
+        width: 50%
+
+.title_headers-under
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 10px
+    margin-top: 0
+
+    img
+        width: 50%
+        margin: 10px
+
+
+    div
+        margin: 5px
+        font-family: $font-stack
+        font-size: 16px
+        color: #4a4e4c
+
+
+.title_header__content__font
+  font-family: $font-stack
+  font-size: 18px
+  color: #4a4e4c
+  background-image: url(../img/ribbon.png)
+  background-position: 50% 50%
+  width: 90%
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  height: 60px
+  line-height: 55px
+  text-align: center
+  margin: 20px
+
+
+.title_navbar
+  flex-wrap: wrap
+  display: flex
+  justify-content: space-between
+  text-align: center
+  padding: 0px 0px 0px 0px
+  width: 90%
+  min-height: 60px
+
+
+.title_navbar__nav__item
+  line-height: 90px
+  padding: 0px 0px 0px 0px
+  font-family: $font-stack
+  font-size: 20px
+  color: #f9ebd9
+  transition: .5s
+  text-shadow: #9e9e9e 0 0 2px
+
+
+.title_navbar__nav__item:hover,
+.title_navbar__nav__item:focus
+  color: #f18686
+  cursor: pointer
+  transition: .5s
+
+
+.title_header__photos
+  margin: 10px
+  width: 90%
+  height: 330px
+  background-color: #f6f3e9
+  display: flex
+  flex-direction: column
+  justify-content:space-between
+  align-items: center
+
+
+
+.title_header__photos_over
+    margin: 10px
+    background-color: #e4e0d7
+    width: 97%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+
+
+.title_header__photos_btn1
+    background-color: #f6f3e9
+    width: 4%
+    height: 20%
+    border-radius: 100% / 50%
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    cursor: pointer
+    display: flex
+    align-items: center
+
+
+
+.title_header__photos_btn2
+    background-color: #f6f3e9
+    width: 4%
+    height: 20%
+    border-radius: 100% / 50%
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+
+.title_header__photos_text
+    font-family: $font-stack
+    font-size: 15px
+    color: #4a4e4c
+    margin-bottom: 5px
+
+
+.about_me_container
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin: 20px
+    margin-top: 30px
+    margin-bottom: 10px
+
+
+.about_me_container_img
+    display: inline-block
+    width: 70%
+
+
+    img
+        width: 100%
+        display: inline-block
+        border: 0
+
+
+
+.about_me_container_items
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 10px
+
+
+.about_me_container_items__title
+    margin-top: 15px
+    font-family: $font-stack
+    font-size: 23px
+    color: #4a4e4c
+
+
+.about_me_container_items__subtitle
+    margin: 5px
+    font-family: $font-main
+    font-size: 15px
+    color: #4a4e4c
+    font-weight: lighter
+
+
+.about_me_container_items__text
+    margin: 5px
+    font-family: $font-main
+    font-size: 14px
+    color: #4a4e4c
+    font-weight: lighter
+
+
+.about_me
+  background-color: #e4e0ce
+
+
+.portfolio
+    background-color: #ef825d
+
+
+.portfolio_content
+    width: 100%
+    margin-top: 25px
+
+
+.filter
+    display: flex
+    flex-direction: row
+    line-height: 25px
+    margin: 5px
+    flex-wrap: wrap
+
+
+.filter_name
+    margin: 5px
+    font-family: $font-main
+    font-size: 18px
+    color: #4a4e4c
+    font-weight: lighter
+
+
+.filter_item
+    background-image: url(../img/tag.png)
+    font-family: $font-stack
+    font-size: 16px
+    color: #4a4e4c
+    font-weight: lighter
+    background-position: 50% 50%
+    background-size: 100% 100%
+    padding: 5px
+    padding-left: 25px
+    padding-right: 10px
+    margin-left: 10px
+    margin-bottom: 10px
+
+
+.portfolio_container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    flex-direction: row
+    align-items: center
+    margin: 20px
+
+
+.portfolio_container_item
+    background-color: #fbfaf6
+    width: 20%
+    height: 200px
+    margin: 10px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    position: relative
+    border-radius: 2px
+
+
+    img
+        width: 20%
+        margin: 0
+        padding: 0
+        position: absolute
+        top: 65%
+        z-index: 0
+
+
+.portfolio_container_photo
+    background-color: #e4e0d7
+    width: 20%
+    height: 200px
+    display: flex
+    width: 95%
+    margin: 5px
+    height: 70%
+
+
+.portfolio_container_text
+    margin: 5%
+    font-family: $font-stack
+    font-size: 100%
+    color: #4a4e4c
+    z-index: 1
+    text-align: center
+
+
+.contact_me
+    background-color: #4f535b
+
+
+.footer_text
+    color: #f9edd6 !important
+
+
+.message_form
+    margin: 10px
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+.message_form_item
+    font-family: $font-main
+    font-size: 18px
+    width: 100%
+    margin: 5px 0
+    line-height: 35px
+    border-style: none
+    border-radius: 2px
+    box-sizing: border-box
+    padding: 0 10px
+
+
+
+.message_form_item_btn
+    line-height: 35px
+    background-color: white
+    border-style: none
+    border-radius: 2px
+    font-family: $font-main
+    font-size: 15px
+    max-width: 100%
+    padding: 5px
+    margin-top: 5px
+    margin-bottom: 5px
+    align-self: flex-start
+    text-align: center
+
+
+.social
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    margin: 10px
+
+
+.social_label
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-family: $font-stack
+    font-size: 20px
+    color: #f9edd6
+    margin: 5px
+
+    div
+        margin: 7px
+
+
+.social_links
+    margin: 10px
+    display: flex
+    flex-wrap: nowrap
+    justify-content: center
+    flex-direction: row
+
+    div
+        width: 7vw
+        display: inline-block
+        cursor: pointer
+
+        img
+            width: 100%
+            display: inline-block
+
+
+.my_blog
+    background: #e3dfdd
+
+
+.my_blog_container
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
+.my_blog_container_item
+    display: flex
+    flex-direction: row
+    margin: 10px
+    justify-content: space-between
+
+
+.my_blog_container_item_img
+    background-color: #e3dfd7
+    min-width: 250px
+    width: 25%
+    height: 200px
+    border-radius: 2px
+    border-style: solid
+    border-color: #fbfaf6
+
+
+.my_blog_container_item_txt
+    width: 70%
+    display: flex
+    flex-direction: column
+
+
+    div
+        margin: 2px
+
+
+.my_blog_container_item_txt_title_header
+    font-family: $font-main
+    font-size: 20px
+    font-weight: bold
+
+
+.my_blog_container_item_txt_title_subtitle
+    font-family: 'Oswald', sans-serif
+    font-size: 12px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+
+.my_blog_container_item_txt_content
+    font-family: $font-main
+    font-size: 15px
+    font-weight: 300
+    line-height: 150%
+
+
+@media screen and (max-width: 768px)
+    .about_me_container
+        flex-wrap: wrap
+
+
+    .about_me_container_img
+        width: 40%
+
+
+    .portfolio_container_item
+        min-width: 60vw
+        min-height: 60vw
+        width: 100%
+        max-width: 40vw
+
+
+    .portfolio_container
+        justify-content: center
+
+
+    .title_navbar
+        display: none
+
+
+    .my_blog_container_item
+        flex-direction: column
+        align-items: center
+        margin: 10px 0
+
+
+    .my_blog_container_item_img
+        max-width: 40vw
+        max-width: 90%
+
+
+    .message_form
+        width: 90%
