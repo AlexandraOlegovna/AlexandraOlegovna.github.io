@@ -3,9 +3,9 @@ https://alexandraolegovna.github.io/Lesson1/dist/
 
 If you want to run it on your own machine:
 
-use ```$ gulp build``` to make `dist/` (clean and minify: css js fonts images)
+ * use ```$ gulp build``` to make `dist/` (clean and minify: css js fonts images)
 
-use ```$ gulp``` to run static server
+ * use ```$ gulp``` to run static server
 
 
 
