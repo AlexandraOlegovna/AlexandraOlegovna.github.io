@@ -18,8 +18,19 @@ gulp.task('sass', function() {
     }))
 })
 
+var babel = require('gulp-babel');
+
+gulp.task('babel', () => {
+    return gulp.src('js/app.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('js/babel'));
+});
+
 gulp.task('watch', ['browserSync', 'sass'], function (){
   gulp.watch('scss/**/*.sass', ['sass']);
+  gulp.watch('js/*.js', ['babel']);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/**/*.js', browserSync.reload);
   // Other watchers
@@ -31,7 +42,9 @@ gulp.task('browserSync', function() {
       baseDir: ''
     },
   })
-})
+});
+
+
 
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
