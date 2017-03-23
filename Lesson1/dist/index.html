@@ -11,19 +11,24 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
   </head>
   <body>
-    <header class="title_header">
+      <header class="title_header">
       <div class="title_container">
-        <nav class="title_navbar" id="topbar">
+          <button class="show-menu" id="hamburger">☰</button>
+          <ul class="title_navbar">
 
-            <a class="title_navbar__nav__item" href="#">ABOUT ME</a>
-            <a class="title_navbar__nav__item" href="#">PORTFOLIO</a>
+            <a href="#"><li>ABOUT ME</li></a>
+            <a href="#"><li>PORTFOLIO</li></a>
 
-			<a class="title_navbar__logo" href="#"><img src="img/logo.png" height="100" width="100" alt="logo" title="logo"></a>
+            <a class="title_navbar__logo" href="#"><img src="img/logo.png" height="100" width="100" alt="logo" title="logo"></a>
 
-            <a class="title_navbar__nav__item" href="#">MY BLOG</a>
-            <a class="title_navbar__nav__item" href="#">CONTACT ME</a>
-          <!-- </nav> -->
-	  </nav>
+            <a href="#"><li>MY BLOG</li></a>
+            <a href="#"><li>CONTACT ME</li></a>
+          </ul>
+      </div>
+  </header>
+    <div class="all_content">
+    <section class="title_header">
+      <div class="title_container">
         <div class="title_header__content">
           <div class="title_header__content__line"><img src="img/retro_banner.png" alt="retro" title="retro"></div>
           <div class="title_header__content__font"> OLD STYLE PORTFOLIO </div>
@@ -43,7 +48,7 @@
           </div>
         </div>
       </div>
-    </header>
+  </section>
     <section class="about_me">
         <div class="title_container">
         <div class="title_header__content__line title_headers"><img src="img/about_me.png" alt="about me" title="about me"></div>
@@ -252,10 +257,10 @@
                 </div>
             </div>
         </div>
-
-        <script src="js/main.min.js"></script>
-
     </footer>
+    </div>
+
+    <script src="js/main.min.js"></script>
 
   </body>
 </html>
