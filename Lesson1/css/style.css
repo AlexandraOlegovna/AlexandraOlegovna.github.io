@@ -452,3 +452,7 @@ a {
     left: 0;
     right: 0;
     position: absolute; } }
+
+@media screen and (min-width: 769px) {
+  .title_navbar {
+    display: flex !important; } }
