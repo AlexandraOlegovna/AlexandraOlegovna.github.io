@@ -7,12 +7,14 @@ $font-main:     'Roboto Slab'
 $beige:         #f9ebd9
 $brown:         #9e9e9e
 $main_turquoise: #78cfcf
+$menu_width:    273px
 
 body, html
     margin: 0 !important
     padding: 0 !important
     height: 100%
     width: 100%
+    background-color: $main_turquoise
 
 a
     cursor: pointer
@@ -95,7 +97,7 @@ a
   width: 75%
   min-height: 60px
   margin: 10px
-  transition: .5s
+  transition: 1s
 
   li
       list-style-type: none
@@ -467,11 +469,16 @@ a
     display: none
     cursor: pointer
     text-align: left
-    width: 100%
+    width: $menu_width
     border: 0
     outline: none
     z-index: 3
     position: fixed
+    left: -240px
+    text-align: right
+    transition: 1s
+    border-bottom-right-radius: 15px
+
 
 .all_content
     top: 0
@@ -503,15 +510,15 @@ a
         display: none
 
     .title_navbar
-        display: none
+        display: block
         margin: 0
         position: fixed
         background-color: $main_turquoise
-        left: 0
+        left: -#{$menu_width}
         z-index: 2
-        width: 273px
+        width: $menu_width
         top: 35px
-        height: 100%
+        border-bottom-right-radius: 40px
 
 
     .my_blog_container_item
@@ -540,4 +547,4 @@ a
 
 @media screen and (min-width: 769px)
     .title_navbar
-        display: flex !important
+        left: -#{$menu_width}

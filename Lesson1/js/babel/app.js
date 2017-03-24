@@ -5,17 +5,19 @@ var $ = function $(s) {
 };
 var a = $("#hamburger");
 var isOpen = false;
-var content = $(".all_content");
 
 a.onclick = function (_) {
     var menu = $(".title_navbar");
+    var icon = $(".show-menu");
 
     if (!isOpen) {
-        menu.style.display = "block";
+        menu.style.left = "0";
+        icon.style.left = "0";
         // content.style.transform = "translate3d(273px, 0px, 0px)"
         isOpen = true;
     } else {
-        menu.style.display = "";
+        menu.style.left = "-273px";
+        icon.style.left = "-240px";
         // content.style.transform = "translate3d(0px, 0px, 0px)"
         isOpen = false;
     }
