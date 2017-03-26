@@ -6,8 +6,7 @@ body, html {
   margin: 0 !important;
   padding: 0 !important;
   height: 100%;
-  width: 100%;
-  background-color: #78cfcf; }
+  width: 100%; }
 
 a {
   cursor: pointer;
@@ -23,7 +22,8 @@ a {
   width: 100%; }
 
 .title_header {
-  background-color: #78cfcf; }
+  background-color: #78cfcf;
+  width: 100%; }
 
 .title_header__content {
   display: flex;
@@ -83,7 +83,7 @@ a {
   width: 75%;
   min-height: 60px;
   margin: 10px;
-  transition: 1s; }
+  transition: 0.5s; }
   .title_navbar li {
     list-style-type: none;
     line-height: 90px;
@@ -407,8 +407,9 @@ a {
   position: fixed;
   left: -240px;
   text-align: right;
-  transition: 1s;
-  border-bottom-right-radius: 15px; }
+  transition: 0.5s;
+  border-bottom-right-radius: 15px;
+  box-sizing: border-box; }
 
 .all_content {
   top: 0;
@@ -417,6 +418,8 @@ a {
   right: 0; }
 
 @media screen and (max-width: 768px) {
+  .title_header {
+    height: 100%; }
   .about_me_container {
     flex-wrap: wrap; }
   .about_me_container_img {

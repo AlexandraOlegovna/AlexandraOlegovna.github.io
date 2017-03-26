@@ -1,25 +1,26 @@
 let $ = s => document.querySelector(s);
-var a = $("#hamburger");
-var isOpen = false;
+let isOpen = false;
 
+function open_close_menu(s){
+    let menu = $(".title_navbar");
+    let icon = $(".show-menu");
 
-a.onclick = _ => {
-    var menu = $(".title_navbar");
-    var icon = $(".show-menu");
-
-    if (!isOpen){
-        menu.style.left = "0"
-        icon.style.left = "0"
-        // content.style.transform = "translate3d(273px, 0px, 0px)"
-        isOpen = true
-    }else
+    if (s === "open"){
+        menu.style.left = "0";
+        icon.style.left = "0";
+        isOpen = true;
+    }
+    else if (s === "close")
     {
-        menu.style.left = "-273px"
-        icon.style.left = "-240px"
-        // content.style.transform = "translate3d(0px, 0px, 0px)"
+        menu.style.left = "-273px";
+        icon.style.left = "-240px";
         isOpen = false;
     }
-
 }
 
-console.log([1,2,3].map(n => n ** 2));
+
+$("#hamburger").onclick = _ =>  open_close_menu( isOpen ? "close" : "open")
+
+$("#content").onclick = _ =>  open_close_menu("close")
+
+$(".title_navbar").onclick = _ => open_close_menu("close")
