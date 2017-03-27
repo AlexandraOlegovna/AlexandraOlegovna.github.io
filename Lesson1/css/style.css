@@ -107,7 +107,7 @@ a {
   flex-direction: column;
   align-items: center; }
 
-.title_header__photos_over {
+.title_header_carousel {
   margin: 10px;
   background-color: #e4e0d7;
   width: 97%;
@@ -116,28 +116,45 @@ a {
   justify-content: space-between;
   height: 100%; }
 
-.title_header__photos_btn1 {
+.title_header_carousel_btn {
   background-color: #f6f3e9;
   width: 4%;
   height: 20%;
   border-radius: 100% / 50%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   cursor: pointer;
   display: flex;
   align-items: center; }
 
-.title_header__photos_btn2 {
-  background-color: #f6f3e9;
-  width: 4%;
-  height: 20%;
-  border-radius: 100% / 50%;
+.title_header_carousel_btn_prev {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.title_header_carousel_btn_next {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
   justify-content: flex-end; }
+
+.title_header_gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; }
+  .title_header_gallery li {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    animation: fading 5s linear; }
+
+@keyframes fading {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .title_header__photos_text {
   font-family: "UniSansHeavy", serif;
@@ -254,8 +271,7 @@ a {
     padding: 0;
     position: absolute;
     top: 65%;
-    z-index: 0;
-    transition: 0.5s; }
+    z-index: 0; }
 
 .portfolio_container_photo {
   background-color: #e4e0d7;
