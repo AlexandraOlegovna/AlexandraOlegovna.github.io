@@ -25,10 +25,18 @@ function validate () {
     }
   })
 
-  result = result && !(elems[1].match(/.+@.+/g) === null)
+  if (!elems[1].value.match(/.+@.+/g)) {
+    showError(elems[1])
+    result = result && false
+  }
   return result
 }
 
 $('.message_form').onsubmit = function () {
   return validate()
 }
+
+let inputs = document.getElementsByTagName('input')
+Array.from(inputs).forEach((elem) => {
+  elem.addEventListener('input', () => resetError(elem))
+})

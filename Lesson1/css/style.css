@@ -13,6 +13,10 @@ a {
   text-decoration: none;
   color: inherit; }
 
+textarea:focus, input:focus {
+  outline: 2px solid #4f535b;
+  box-shadow: 0 0 10px #4f535b; }
+
 .title {
   height: auto; }
 
@@ -332,8 +336,6 @@ a {
   box-sizing: border-box;
   padding: 0 10px;
   resize: none; }
-  .message_form_item:focus {
-    box-shadow: 0 0 0 0 black; }
 
 .message_form_item_btn {
   line-height: 35px;
