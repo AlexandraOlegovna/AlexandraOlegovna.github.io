@@ -314,6 +314,7 @@ a {
 
 .message_form {
   margin: 10px;
+  max-width: 550px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -329,7 +330,10 @@ a {
   border-style: none;
   border-radius: 2px;
   box-sizing: border-box;
-  padding: 0 10px; }
+  padding: 0 10px;
+  resize: none; }
+  .message_form_item:focus {
+    box-shadow: 0 0 0 0 black; }
 
 .message_form_item_btn {
   line-height: 35px;
@@ -359,9 +363,17 @@ a {
   font-family: "UniSansHeavy", serif;
   font-size: 20px;
   color: #f9edd6;
-  margin: 5px; }
+  margin: 5px;
+  text-align: center; }
   .social_label div {
-    margin: 7px; }
+    margin: 7px;
+    font-size: 25px; }
+    .social_label div:hover {
+      color: #f18686;
+      cursor: pointer;
+      transition: .5s; }
+  .social_label img {
+    width: 7vw; }
 
 .social_links {
   margin: 10px;
@@ -451,6 +463,27 @@ a {
   bottom: 0;
   left: 0;
   right: 0; }
+
+.layout {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5; }
+
+.close {
+  align-self: flex-end;
+  font-size: 2em;
+  cursor: pointer; }
+
+.error-input {
+  box-shadow: 0 0 10px 1px red; }
 
 @media screen and (max-width: 768px) {
   .title {
