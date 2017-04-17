@@ -33,10 +33,21 @@ function validate () {
 }
 
 $('.message_form').onsubmit = function () {
-  return validate()
+  let elems = Array.from($('.message_form').elements)
+  if (!validate()) return false
+  let xmlhttp = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
+  xmlhttp.open('POST', 'https://mandrillapp.com/api/1.0/messages/send.json')
+  xmlhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.status === 200) console.log('Mail sended!')
+    if (xmlhttp.status === 500) console.log('Check apikey')
+  }
+  xmlhttp.send(JSON.stringify({'key': 'dpsUU8LGRK-5Gqj_oND8kw',
+    'message': {
+      'from_email': elems[1].value,
+      'to': [{'email': 'my_mail@mail.ru', 'name': elems[0].value, 'type': 'to'}],
+      'autotext': elems[3].value,
+      'subject': elems[2].value,
+      'html': ''
+    }}))
 }
-
-let inputs = document.getElementsByTagName('input')
-Array.from(inputs).forEach((elem) => {
-  elem.addEventListener('input', () => resetError(elem))
-})
