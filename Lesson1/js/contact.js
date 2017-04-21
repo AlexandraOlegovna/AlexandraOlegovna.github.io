@@ -51,3 +51,8 @@ $('.message_form').onsubmit = function () {
       'html': ''
     }}))
 }
+
+let inputs = document.getElementsByTagName('input')
+Array.from(inputs).forEach((elem) => {
+  elem.addEventListener('input', () => resetError(elem))
+})

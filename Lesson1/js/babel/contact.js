@@ -57,3 +57,10 @@ $('.message_form').onsubmit = function () {
       'html': ''
     } }));
 };
+
+var inputs = document.getElementsByTagName('input');
+Array.from(inputs).forEach(function (elem) {
+  elem.addEventListener('input', function () {
+    return resetError(elem);
+  });
+});
