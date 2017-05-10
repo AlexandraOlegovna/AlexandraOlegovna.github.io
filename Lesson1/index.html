@@ -24,6 +24,8 @@
       var assert = chai.assert;
     </script>
 
+    <script src="https://unpkg.com/vue"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
   </head>
@@ -51,20 +53,16 @@
               <div class="title_header__content__line"><img src="img/retro_banner.png" alt="retro" title="retro"></div>
               <div class="title_header__content__font"> OLD STYLE PORTFOLIO </div>
               <div class="title_header__photos">
-                  <div class="title_header_carousel">
-                    <div class="title_header_carousel_btn_prev title_header_carousel_btn">
+                  <div id="image-slider" class="title_header_carousel">
+                    <a @click="prev" class="title_header_carousel_btn_prev title_header_carousel_btn">
                         <img src="img/left_arrow.png" width="50%" alt="left arrow" title="left arrow">
-                    </div>
-                    <div class="title_header_carousel_btn_next title_header_carousel_btn">
+                    </a>
+                    <a @click="next" class="title_header_carousel_btn_next title_header_carousel_btn">
                         <img src="img/right_arrow.png" width="50%" alt="right arrow" title="right arrow">
+                    </a>
+                    <div class="title_header_gallery" v-for="number in [currentNumber]">
+                      <img :src="images[currentNumber]">
                     </div>
-                    <ul class="title_header_gallery">
-                        <li style="display:block"><img src="http://themes.opendept.net/retro-portfolio/wp-content/uploads/2012/02/slide_01.jpg"></li>
-                        <li><img src="http://themes.opendept.net/retro-portfolio/wp-content/uploads/2012/02/slide_02.jpg"></li>
-                        <li><img src="http://themes.opendept.net/retro-portfolio/wp-content/uploads/2012/02/slide_03.jpg"></li>
-                        <li><img src="http://themes.opendept.net/retro-portfolio/wp-content/uploads/2012/02/slide_04.jpg"></li>
-                      </ul>
-                    </ul>
                   </div>
                   <div class="title_header__photos_text"> KODAK CAMERA</div>
               </div>
@@ -297,6 +295,7 @@
     <script src="js/babel/slider.js"> </script>
     <script src="js/babel/contact.js"> </script>
     <script src="js/babel/tests.js"> </script>
+    <script src ="js/babel/vue_templates.js"></script>
     <!--endbuild -->
 
     <div id="mocha"></div>

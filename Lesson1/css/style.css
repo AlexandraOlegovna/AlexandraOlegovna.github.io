@@ -156,21 +156,8 @@ textarea:focus, input:focus {
   padding: 0;
   list-style: none;
   overflow: hidden; }
-  .title_header_gallery li img {
+  .title_header_gallery img {
     width: 100%; }
-  .title_header_gallery li {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s linear;
-    animation: fading 5s linear; }
-
-@keyframes fading {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
 
 .title_header__photos_text {
   font-family: "UniSansHeavy", serif;
