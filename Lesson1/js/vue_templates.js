@@ -34,7 +34,7 @@ let slider = new Vue({
 })
 
 let content = new Vue({
-  el: '#about',
+  el: '#content',
   data: {
     about_content :[{
       image: dir + 'tv.png',
@@ -55,6 +55,24 @@ let content = new Vue({
       subtitle: 'WHAT I EAT',
       content: 'Donec a tortor vel dolor volutpat feugiat. Sed placerat sollicitudin fermentum. In molestie urna rutrum, lacinia mi id, porttitor justo. Quisque dictum sapien leo, ut hendrerit tellus bibendum at. Pellentesque auctor nisi dui, eleifend dignissim ante facilisis sed. Donec sit amet augue finibus, cursus lacus ut, porttitor urna. Donec eget sollicitudin ante, nec auctor nulla.'
       }
+    ],
+    portfolio_content: [{
+      image: dir + 'gallery.png',
+      title: 'GALLERIES ARE FUNNY'}, {
+      image: dir + 'video.png',
+      title: 'A VIMEO REEL'},{
+      image: dir + 'sound.png',
+      title: 'LOVE FOR OLD CAMERAS'},{
+      image: dir + 'note.png',
+      title: 'DETAILED PROJECT PAGE'},{
+      image: dir + 'video.png',
+      title: 'YOUTOUBE VIDEO'},{
+      image: dir + 'clip.png',
+      title: 'ANOTHER EXTERNAL LINK'},{
+      image: dir + 'gallery.png',
+      title: 'A LIGHTBOX IMAGE'},{
+      image: dir + 'sound.png',
+      title: 'THE D ANK TEMPEST'}
     ]
   }
 })

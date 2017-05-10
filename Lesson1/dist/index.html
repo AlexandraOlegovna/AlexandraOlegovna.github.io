@@ -74,7 +74,7 @@
                 <img src="img/separator.png" alt="separator" title="separator">
                 <div>I AM A GRAPHIC DESIGNER FROM BALTIMOR</div>
             </div>
-            <div id="about" class="about_me_container">
+            <div class="about_me_container">
                 <div v-for="elem in about_content" class="about_me_container_items">
                     <div class="about_me_container_img"><img :src="elem.image"></div>
                     <div class="about_me_container_items__title"> {{elem.title}}</div>
@@ -82,27 +82,6 @@
                     <img src="img/separator1.png" alt="separator" title="separator">
                     <div class="about_me_container_items__text"> {{elem.content}} </div>
                 </div>
-                <!-- <div class="about_me_container_items">
-                    <div class="about_me_container_img"><img src="img/music.png" alt="music" title="music"></div>
-                    <div class="about_me_container_items__title"> MUSIC</div>
-                    <div class="about_me_container_items__subtitle"> WHAT I LISTEN</div>
-                    <img src="img/separator1.png" alt="separator" title="separator">
-                    <div class="about_me_container_items__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
-                </div>
-                <div class="about_me_container_items">
-                    <div class="about_me_container_img"><img src="img/clothes.png" alt="clothes" title="clothes"></div>
-                    <div class="about_me_container_items__title"> CLOTHES</div>
-                    <div class="about_me_container_items__subtitle"> WHAT I WEAR</div>
-                    <img src="img/separator1.png" alt="separator" title="separator">
-                    <div class="about_me_container_items__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
-                </div>
-                <div class="about_me_container_items">
-                    <div class="about_me_container_img"><img src="img/food.png" alt="food" title="food"></div>
-                    <div class="about_me_container_items__title"> FOOD</div>
-                    <div class="about_me_container_items__subtitle"> WHAT I EAT</div>
-                    <img src="img/separator1.png" alt="separator" title="separator">
-                    <div class="about_me_container_items__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
-                </div> -->
               </div>
             </div>
         </section>
@@ -123,45 +102,10 @@
                         <div class="filter_item"> resourses </div>
                     </div>
                     <div class="portfolio_container">
-                        <div class="portfolio_container_item">
+                        <div v-for="elem in portfolio_content" class="portfolio_container_item">
                             <div class="portfolio_container_photo"></div>
-                            <img src="img/gallery.png" alt="gallery" title="gallery">
-                            <div class="portfolio_container_text">GALLERIES ARE FUNNY</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/video.png" alt="video" title="video">
-                            <div class="portfolio_container_text">A VIMEO REEL</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/sound.png" alt="sound" title="sound">
-                            <div class="portfolio_container_text">LOVE FOR OLD CAMERAS</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/note.png" alt="note" title="note">
-                            <div class="portfolio_container_text">DETAILED PROJECT PAGE</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/video.png" alt="video" title="video">
-                            <div class="portfolio_container_text">YOUTOUBE VIDEO</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/clip.png" alt="clip" title="clip">
-                            <div class="portfolio_container_text">ANOTHER EXTERNAL LINK</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/gallery.png" alt="gallery" title="gallery">
-                            <div class="portfolio_container_text">A LIGHTBOX IMAGE</div>
-                        </div>
-                        <div class="portfolio_container_item">
-                            <div class="portfolio_container_photo"></div>
-                            <img src="img/sound.png" alt="sound" title="sound">
-                            <div class="portfolio_container_text">THE DANK TEMPEST</div>
+                            <img :src="elem.image" alt="gallery" title="gallery">
+                            <div class="portfolio_container_text">{{elem.title}}</div>
                         </div>
                     </div>
                 </div>
