@@ -80,15 +80,15 @@
                 <img src="img/separator.png" alt="separator" title="separator">
                 <div>I AM A GRAPHIC DESIGNER FROM BALTIMOR</div>
             </div>
-            <div class="about_me_container">
-                <div class="about_me_container_items">
-                    <div class="about_me_container_img"><img src="img/tv.png" alt="tv" title="tv"></div>
-                    <div class="about_me_container_items__title"> MOVIES</div>
-                    <div class="about_me_container_items__subtitle"> WHAT I WATCH</div>
+            <div id="about" class="about_me_container">
+                <div v-for="elem in about_content" class="about_me_container_items">
+                    <div class="about_me_container_img"><img :src="elem.image"></div>
+                    <div class="about_me_container_items__title"> {{elem.title}}</div>
+                    <div class="about_me_container_items__subtitle"> {{elem.subtitle}}</div>
                     <img src="img/separator1.png" alt="separator" title="separator">
-                    <div class="about_me_container_items__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+                    <div class="about_me_container_items__text"> {{elem.content}} </div>
                 </div>
-                <div class="about_me_container_items">
+                <!-- <div class="about_me_container_items">
                     <div class="about_me_container_img"><img src="img/music.png" alt="music" title="music"></div>
                     <div class="about_me_container_items__title"> MUSIC</div>
                     <div class="about_me_container_items__subtitle"> WHAT I LISTEN</div>
@@ -108,8 +108,8 @@
                     <div class="about_me_container_items__subtitle"> WHAT I EAT</div>
                     <img src="img/separator1.png" alt="separator" title="separator">
                     <div class="about_me_container_items__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
-                </div>
-                </div>
+                </div> -->
+              </div>
             </div>
         </section>
         <section class="portfolio">
