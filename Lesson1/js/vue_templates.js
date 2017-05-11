@@ -1,35 +1,4 @@
 let dir = 'img/'
-// let slider = new Vue({
-//   el: '#image-slider',
-//   data: {
-//
-//   },
-//   mounted: function () {
-//     this.startRotation()
-//   },
-//
-//   methods: {
-//     startRotation: function () {
-//       this.timer = setInterval(this.next, 3000)
-//     },
-//
-//     stopRotation: function () {
-//       clearTimeout(this.timer)
-//       this.timer = null
-//     },
-//
-//     next: function () {
-//       this.stopRotation()
-//       this.currentNumber = Math.abs(this.currentNumber + 1) % this.images.length
-//       this.startRotation()
-//     },
-//     prev: function () {
-//       this.stopRotation()
-//       this.currentNumber = Math.abs(this.currentNumber - 1 + this.images.length) % this.images.length
-//       this.startRotation()
-//     }
-//   }
-// })
 
 let content = new Vue({
   el: '#content',
