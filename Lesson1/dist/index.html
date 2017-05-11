@@ -47,7 +47,7 @@
               <div class="title_header__content__line"><img src="img/retro_banner.png" alt="retro" title="retro"></div>
               <div class="title_header__content__font"> OLD STYLE PORTFOLIO </div>
               <div class="title_header__photos">
-                  <div id="image-slider" class="title_header_carousel">
+                  <div class="title_header_carousel">
                     <a @click="prev" class="title_header_carousel_btn_prev title_header_carousel_btn">
                         <img src="img/left_arrow.png" width="50%" alt="left arrow" title="left arrow">
                     </a>
@@ -126,63 +126,24 @@
                 </div>
 
                 <div class="my_blog_container">
-                    <div class="my_blog_container_item">
+                    <div v-for="elem in blog_content" class="my_blog_container_item">
                         <div class="my_blog_container_item_img"></div>
                         <div class="my_blog_container_item_txt">
                             <div class="my_blog_container_item_txt_title">
                                 <div class="my_blog_container_item_txt_title_header">
-                                    The Magic Wheel
+                                    {{elem.title}}
                                 </div>
                                 <div class="my_blog_container_item_txt_title_subtitle">
-                                    <div>JULI 28, 2014 // ADMIN // FUN, TRAVEL, TRENDS</div>
-                                    <div> 1 RESPONSE </div>
+                                    <div>{{elem.tags}}</div>
+                                    <div> {{elem.comments}} RESPONSE </div>
                                 </div>
                             </div>
                             <div class="my_blog_container_item_txt_content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                {{elem.content}}
                                 <a href="#">(MORE...)</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="my_blog_container_item">
-                        <div class="my_blog_container_item_img"></div>
-                        <div class="my_blog_container_item_txt">
-                            <div class="my_blog_container_item_txt_title">
-                                <div class="my_blog_container_item_txt_title_header">
-                                    The lonely road
-                                </div>
-                                <div class="my_blog_container_item_txt_title_subtitle">
-                                    <div>JULI 28, 2014 // ADMIN // FUN, TRAVEL, TRENDS, WED DESIGN</div>
-                                    <div> 3 RESPONSE </div>
-                                </div>
-                            </div>
-                            <div class="my_blog_container_item_txt_content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                <a href="#">(MORE...)</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="my_blog_container_item">
-                        <div class="my_blog_container_item_img"></div>
-                        <div class="my_blog_container_item_txt">
-                            <div class="my_blog_container_item_txt_title">
-                                <div class="my_blog_container_item_txt_title_header">
-                                    I love gasoline smell
-                                </div>
-                                <div class="my_blog_container_item_txt_title_subtitle">
-                                    <div>JULI 28, 2014 // ADMIN // FUN, TRENDS, WEB DESIGN</div>
-                                    <div> NO RESPONSE </div>
-                                </div>
-                            </div>
-                            <div class="my_blog_container_item_txt_content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                <a href="#">(MORE...)</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
                 <div class="title_headers-under">

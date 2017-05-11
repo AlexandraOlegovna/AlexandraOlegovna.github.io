@@ -1,41 +1,42 @@
 let dir = 'img/'
-let slider = new Vue({
-  el: '#image-slider',
-  data: {
-    currentNumber: 0,
-    timer: null,
-    images: [dir + 'slide1.jpg', dir + 'slide2.jpg', dir + 'slide3.jpg', dir + 'slide4.jpg']
-  },
-  mounted: function () {
-    this.startRotation()
-  },
-
-  methods: {
-    startRotation: function () {
-      this.timer = setInterval(this.next, 3000)
-    },
-
-    stopRotation: function () {
-      clearTimeout(this.timer)
-      this.timer = null
-    },
-
-    next: function () {
-      this.stopRotation()
-      this.currentNumber = Math.abs(this.currentNumber + 1) % this.images.length
-      this.startRotation()
-    },
-    prev: function () {
-      this.stopRotation()
-      this.currentNumber = Math.abs(this.currentNumber - 1 + this.images.length) % this.images.length
-      this.startRotation()
-    }
-  }
-})
+// let slider = new Vue({
+//   el: '#image-slider',
+//   data: {
+//
+//   },
+//   mounted: function () {
+//     this.startRotation()
+//   },
+//
+//   methods: {
+//     startRotation: function () {
+//       this.timer = setInterval(this.next, 3000)
+//     },
+//
+//     stopRotation: function () {
+//       clearTimeout(this.timer)
+//       this.timer = null
+//     },
+//
+//     next: function () {
+//       this.stopRotation()
+//       this.currentNumber = Math.abs(this.currentNumber + 1) % this.images.length
+//       this.startRotation()
+//     },
+//     prev: function () {
+//       this.stopRotation()
+//       this.currentNumber = Math.abs(this.currentNumber - 1 + this.images.length) % this.images.length
+//       this.startRotation()
+//     }
+//   }
+// })
 
 let content = new Vue({
   el: '#content',
   data: {
+    currentNumber: 0,
+    timer: null,
+    images: [dir + 'slide1.jpg', dir + 'slide2.jpg', dir + 'slide3.jpg', dir + 'slide4.jpg'],
     about_content :[{
       image: dir + 'tv.png',
       title: 'MOVIES',
@@ -73,6 +74,46 @@ let content = new Vue({
       title: 'A LIGHTBOX IMAGE'},{
       image: dir + 'sound.png',
       title: 'THE D ANK TEMPEST'}
+    ],
+    blog_content: [{
+      title: 'The Magic Wheel',
+      tags: 'JULI 28, 2014 // ADMIN // FUN, TRAVEL, TRENDS',
+      comments: '1',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},{
+      title: 'The lonely road',
+      tags: 'JULI 28, 2014 // ADMIN // FUN, TRAVEL, TRENDS, WED DESIGN',
+      comments: '3',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},{
+      title: 'I love gasoline smell',
+      tags: 'JULI 28, 2014 // ADMIN // FUN, TRENDS, WEB DESIGN',
+      comments: 'NO',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      }
     ]
+  },
+  mounted: function () {
+    this.startRotation()
+  },
+
+  methods: {
+    startRotation: function () {
+      this.timer = setInterval(this.next, 3000)
+    },
+
+    stopRotation: function () {
+      clearTimeout(this.timer)
+      this.timer = null
+    },
+
+    next: function () {
+      this.stopRotation()
+      this.currentNumber = Math.abs(this.currentNumber + 1) % this.images.length
+      this.startRotation()
+    },
+    prev: function () {
+      this.stopRotation()
+      this.currentNumber = Math.abs(this.currentNumber - 1 + this.images.length) % this.images.length
+      this.startRotation()
+    }
   }
 })
